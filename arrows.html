@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+/*if you need for tips how to use arrow functions look at the following resources
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+https://codeburst.io/javascript-arrow-functions-for-beginners-926947fc0cdc 
+*/
+
+
+//This is an example of an arow function 
+//test(3) is the equivalent of test = (param)  and there is no need to write a return function unless
+//you use curly brackets 
+var test = (param) => param + 2;
+console.log("this is for the var test " + test(3));
+
+//if you want to use curly brackets with arrow functions, you will have type return in order to return the arrow
+//functions value
+var test2 = (param) => { return param * 3};
+console.log("this is for the var test2 " + test2(4));
+
+//parentheses () are optional when there is only value like param, so the following will work
+var test3 = param => param - 3;
+console.log("this is for the var test3 " + test3(8));
+
+//however we need parentheses () when there are multiple values
+var test4 = (param, param2) => param + param2 + 10;
+console.log("this is for the var test4 that has multiple values " + test4(8,10));
+
+
+//Now this is some other code to test our knowledge this will create a new array for test5 and add three to each value
+var array1 = [10, 4, 5, 6];
+var test5 = array1.map((param) => param + 3);
+console.log("this is for the var test5 that has array.map test using arrow functions " + test5);
+
+//If done in a normal function format, it would look something like the following
+var array1 = [15, 7, 8, 9];
+var test6 = array1.map(function(param){ 
+    return param + 3
+    });
+console.log("this is for the var test6 that has array.map using a normal function" + test6);
+
+</script>
+<body>
+    
+</body>
+</html>
+
+
